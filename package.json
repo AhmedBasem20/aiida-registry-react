@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://ahmedbasem20.github.io/aiida-registry/",
+  "homepage": "https://ahmedbasem20.github.io/aiida-registry-react/",
   "scripts": {
     "dev": "vite",
     "predeploy": "npm run build",
