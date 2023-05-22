@@ -53,7 +53,7 @@ function Details() {
     <h2>
         AiiDA plugin package &quot;<a href={value.code_home}>{value.name}</a>&quot;
     </h2>
-    <p><a href="/">&lt; back to the registry index</a></p>
+    <p><a href="/aiida-registry-react">&lt; back to the registry index</a></p>
     <h2>General information</h2>
     <div>
       <p>
