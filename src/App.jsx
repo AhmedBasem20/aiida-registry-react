@@ -19,8 +19,8 @@ function App() {
     </div>
     <div>
       <Routes>
-        <Route path="/" element={<MainIndex />} />
-        <Route path="/:key" element={<Details />} />
+        <Route path="/aiida-registry-react/" element={<MainIndex />} />
+        <Route path="/aiida-registry-react/details/:key" element={<Details />} />
       </Routes>
     </div>
     </>
@@ -32,7 +32,7 @@ function MainIndex() {
     <div>
       {Object.entries(jsonData).map(([key, value]) => (
         <div key={key}>
-          <Link to={`/${key}`}><h3>{key}</h3></Link>
+          <Link to={`/aiida-registry-react/details/${key}`}><h3>{key}</h3></Link>
           <p>{value.development_status}</p>
           <p>{value.aiida_version}</p>
           <p>{value.metadata.description}</p>
