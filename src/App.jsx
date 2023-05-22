@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import jsonData from './plugins.json';
 import { Link, Route, Routes } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
@@ -20,8 +19,8 @@ function App() {
     </div>
     <div>
       <Routes>
-        <Route path="/aiida-registry/" element={<MainIndex />} />
-        <Route path="/aiida-registry/details/:key" element={<Details />} />
+        <Route path="/" element={<MainIndex />} />
+        <Route path="/:key" element={<Details />} />
       </Routes>
     </div>
     </>
@@ -33,7 +32,7 @@ function MainIndex() {
     <div>
       {Object.entries(jsonData).map(([key, value]) => (
         <div key={key}>
-          <Link to={`/aiida-registry/details/${key}`}><h3>{key}</h3></Link>
+          <Link to={`/${key}`}><h3>{key}</h3></Link>
           <p>{value.development_status}</p>
           <p>{value.aiida_version}</p>
           <p>{value.metadata.description}</p>
